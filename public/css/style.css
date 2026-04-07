@@ -121,7 +121,7 @@ body {
   grid-template-columns: 1fr 480px;
   gap: 48px;
   align-items: center;
-  padding-top: 52px;
+  padding-top: 22px;
 }
 
 /* ---- Left copy ---- */
@@ -216,7 +216,7 @@ body {
   padding: 34px 30px;
   box-shadow: var(--shadow-lg);
   position: relative;
-  /* overflow: hidden; */ /* Removing hidden overflow to allow result panel space if needed */
+  overflow: hidden;
 }
 
 /* Rainbow top bar */
