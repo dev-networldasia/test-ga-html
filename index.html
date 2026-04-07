@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đánh Giá Tình Trạng Dinh Dưỡng | Bảng Chuẩn WHO</title>
+  <meta name="description" content="Công cụ đánh giá chiều cao cân nặng theo tiêu chuẩn WHO cho trẻ em. Kiểm tra tình trạng dinh dưỡng của bé dựa trên bảng chuẩn WHO quốc tế." />
+  <link rel="icon" type="image/x-icon" href="/public/images/fav-ldp-ga4.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/images/fav-ldp-ga4.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="public/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <!-- Sky decorative strip -->
+    <div class="hero__sky">
+      <p class="hero__sky-text">
+        <span>🌿</span>
+        VIỆN Y HỌC ỨNG DỤNG VIỆT NAM
+        <span>🌿</span>
+      </p>
+    </div>
+    <div class="container">
+      <div class="hero__inner">
+        <!-- Left: branding + copy -->
+        <div class="hero__left">
+          <div class="hero__badge">
+            <span class="badge-icon">🏥</span>
+            <span>Theo tiêu chuẩn WHO quốc tế</span>
+          </div>
+          <h1 class="hero__title">Đánh Giá<br /><span class="highlight">Dinh Dưỡng</span><br />Cho Bé</h1>
+          <p class="hero__sub">Kiểm tra ngay chiều cao &amp; cân nặng của bé so với bảng chuẩn WHO. Phát hiện sớm tình trạng suy dinh dưỡng hoặc thừa cân để có hướng chăm sóc phù hợp.</p>
+          <div class="hero__stats">
+            <div class="stat-pill">
+              <span class="stat-num">+10k</span>
+              <span class="stat-label">Phụ huynh tin dùng</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">WHO</span>
+              <span class="stat-label">Tiêu chuẩn quốc tế</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">0–10</span>
+              <span class="stat-label">Tuổi áp dụng</span>
+            </div>
+          </div>
+          <!-- Floating illustration -->
+          <img
+            src="public/images/boy-and-girl.webp"
+            alt="Bé trai và bé gái"
+            class="hero__illust"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Right: Calculator Card -->
+        <div class="hero__right">
+          <div class="calc-card" id="calcCard">
+            <div class="calc-card__header">
+              <div class="calc-card__icon">📊</div>
+              <h2 class="calc-card__title">Kiểm Tra Chỉ Số Bé</h2>
+              <p class="calc-card__sub">Nhập thông tin để nhận kết quả ngay</p>
+            </div>
+
+            <form id="calcForm" class="calc-form" novalidate>
+              <!-- Date of birth -->
+              <div class="form-group">
+                <label class="form-label">Ngày sinh</label>
+                <div class="dob-row">
+                  <select id="dobDay" class="form-select" aria-label="Ngày">
+                    <option value="">Ngày</option>
+                  </select>
+                  <select id="dobMonth" class="form-select" aria-label="Tháng">
+                    <option value="">Tháng</option>
+                  </select>
+                  <select id="dobYear" class="form-select" aria-label="Năm">
+                    <option value="">Năm</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Gender -->
+              <div class="form-group">
+                <label class="form-label">Giới tính</label>
+                <div class="gender-row">
+                  <label class="gender-option" id="genderMaleLabel">
+                    <input type="radio" name="gender" id="genderMale" value="male" />
+                    <span class="gender-btn">
+                      <span class="gender-icon">👦</span>
+                      <span>Bé trai</span>
+                    </span>
+                  </label>
+                  <label class="gender-option" id="genderFemaleLabel">
+                    <input type="radio" name="gender" id="genderFemale" value="female" />
+                    <span class="gender-btn">
+                      <span class="gender-icon">👧</span>
+                      <span>Bé gái</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Height -->
+              <div class="form-group">
+                <label class="form-label" for="height">Chiều cao (cm)</label>
+                <div class="input-wrap">
+                  <input type="number" id="height" class="form-input" placeholder="VD: 89.4" min="30" max="200" step="0.1" />
+                  <span class="input-unit">cm</span>
+                </div>
+              </div>
+
+              <!-- Weight -->
+              <div class="form-group">
+                <label class="form-label" for="weight">Cân nặng (kg)</label>
+                <div class="input-wrap">
+                  <input type="number" id="weight" class="form-input" placeholder="VD: 14.6" min="1" max="150" step="0.1" />
+                  <span class="input-unit">kg</span>
+                </div>
+              </div>
+
+              <!-- Notes -->
+              <div class="form-note">
+                <p>💡 <strong>Lưu ý:</strong> Với trẻ dưới 2 tuổi, chiều cao tính bằng độ dài nằm. Nhập chính xác để có kết quả tốt nhất.</p>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" id="btnCalculate" class="btn btn--primary">
+                  <span class="btn-icon">🔍</span> Kết quả
+                </button>
+                <button type="button" id="btnReset" class="btn btn--outline">
+                  <span class="btn-icon">↺</span> Làm lại
+                </button>
+              </div>
+
+              <!-- HIDDEN TRACKING BUTTON -->
+              <button type="button" id="hiddenTrackBtn" aria-hidden="true" tabindex="-1" style="display:none;">track</button>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO TABLE SECTION ===== -->
+  <section class="who-section" id="whoTable">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">📋 Bảng tham chiếu</div>
+        <h2 class="section-title">Bảng Chiều Cao – Cân Nặng <span>Chuẩn WHO</span></h2>
+        <p class="section-sub">Dữ liệu chuẩn quốc tế của Tổ chức Y tế Thế giới (WHO) cho trẻ từ sơ sinh đến 10 tuổi</p>
+      </div>
+
+      <!-- Tab gender toggle -->
+      <div class="table-tabs">
+        <button class="tab-btn tab-btn--active" id="tabBoy" onclick="switchTab('boy')">👦 Bé Trai</button>
+        <button class="tab-btn" id="tabGirl" onclick="switchTab('girl')">👧 Bé Gái</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="who-table" id="whoDataTable">
+          <thead>
+            <tr>
+              <th rowspan="2" class="th-age">Tháng / Tuổi</th>
+              <th colspan="3" class="th-group th-group--weight">Cân Nặng (kg)</th>
+              <th colspan="3" class="th-group th-group--height">Chiều Cao (cm)</th>
+            </tr>
+            <tr>
+              <th class="th-sub">-2SD</th>
+              <th class="th-sub th-sub--mid">TB</th>
+              <th class="th-sub">+2SD</th>
+              <th class="th-sub">-2SD</th>
+              <th class="th-sub th-sub--mid">TB</th>
+              <th class="th-sub">+2SD</th>
+            </tr>
+          </thead>
+          <tbody id="whoTableBody">
+            <!-- Filled by JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-legend">
+        <div class="legend-item"><span class="legend-dot legend-dot--low"></span> <strong>-2SD</strong>: Dưới ngưỡng bình thường (suy dinh dưỡng)</div>
+        <div class="legend-item"><span class="legend-dot legend-dot--mid"></span> <strong>TB</strong>: Trung bình (chuẩn)</div>
+        <div class="legend-item"><span class="legend-dot legend-dot--high"></span> <strong>+2SD</strong>: Trên ngưỡng bình thường</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRACKING COUNTER (demo visual) ===== -->
+  <div id="trackCounter" class="track-counter" title="Số lần tương tác được ghi nhận">
+    <span class="track-counter__icon">📈</span>
+    <span id="trackCount">0</span>
+    <span class="track-counter__label">lượt</span>
+  </div>
+
+  <!-- ===== RESULT MODAL ===== -->
+  <div id="resultModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <!-- Modal header -->
+      <div class="modal-header" id="modalHeader">
+        <div class="modal-header__left">
+          <span id="resultEmoji" class="result-emoji">✅</span>
+          <h3 id="resultTitle" class="result-title">Chuẩn</h3>
+        </div>
+        <button class="modal-close" id="modalClose" aria-label="Đóng">&times;</button>
+      </div>
+
+      <!-- Badge summary -->
+      <div class="modal-badge" id="modalBadge">
+        <span id="modalBadgeText">Phát triển bình thường</span>
+      </div>
+
+      <!-- Stats grid -->
+      <div class="modal-grid">
+        <div class="modal-item">
+          <span class="modal-item__icon">🎂</span>
+          <span class="modal-item__label">Tuổi</span>
+          <span id="resultAge" class="modal-item__value">—</span>
+        </div>
+        <div class="modal-item">
+          <span class="modal-item__icon">📏</span>
+          <span class="modal-item__label">Chiều cao</span>
+          <span id="resultHeight" class="modal-item__value">—</span>
+        </div>
+        <div class="modal-item">
+          <span class="modal-item__icon">⚖️</span>
+          <span class="modal-item__label">Cân nặng</span>
+          <span id="resultWeight" class="modal-item__value">—</span>
+        </div>
+        <div class="modal-item modal-item--who">
+          <span class="modal-item__icon">📊</span>
+          <span class="modal-item__label">WHO TB chiều cao</span>
+          <span id="resultWhoHeight" class="modal-item__value">—</span>
+        </div>
+        <div class="modal-item modal-item--who">
+          <span class="modal-item__icon">📊</span>
+          <span class="modal-item__label">WHO TB cân nặng</span>
+          <span id="resultWhoWeight" class="modal-item__value">—</span>
+        </div>
+      </div>
+
+      <!-- Comment -->
+      <div class="modal-comment" id="modalComment">
+        <span id="resultComment">—</span>
+      </div>
+
+      <button class="btn btn--primary modal-ok" id="modalOk">Đóng lại</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 <strong>Đánh Giá Dinh Dưỡng</strong> | Dữ liệu theo chuẩn <strong>WHO</strong> | Chỉ mang tính tham khảo, không thay thế chẩn đoán y tế.</p>
+    </div>
+  </footer>
+
+  <script src="public/js/who-data.js"></script>
+  <script src="public/js/calculator.js"></script>
+  <script src="public/js/tracking.js"></script>
+</body>
+</html>
