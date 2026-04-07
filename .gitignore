@@ -1,0 +1,8 @@
+.env
+logs/*
+settings.json
+*.bk.*
+docker/
+db/
+tmp/*
+*_templ.go
