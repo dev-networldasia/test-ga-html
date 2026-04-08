@@ -79,79 +79,79 @@
         <!-- Right: Calculator Card -->
         <div class="hero__right">
           <div class="calc-card" id="calcCard">
-            <div class="calc-card__header">
-              <div class="calc-card__icon">📊</div>
-              <h2 class="calc-card__title">Kiểm Tra Chỉ Số Bé</h2>
-              <p class="calc-card__sub">Nhập thông tin để nhận kết quả ngay</p>
+            <div class="calc-card__header track-u">
+              <div class="calc-card__icon track-u">📊</div>
+              <h2 class="calc-card__title track-u">Kiểm Tra Chỉ Số Bé</h2>
+              <p class="calc-card__sub track-u">Nhập thông tin để nhận kết quả ngay</p>
             </div>
 
-            <form id="calcForm" class="calc-form" novalidate>
+            <form id="calcForm" class="calc-form track-u" novalidate>
               <!-- Date of birth -->
-              <div class="form-group">
-                <label class="form-label">Ngày sinh</label>
+              <div class="form-group track-u">
+                <label class="form-label track-u">Ngày sinh</label>
                 <div class="dob-row">
-                  <select id="dobDay" class="form-select" aria-label="Ngày">
+                  <select id="dobDay" class="form-select track-u" aria-label="Ngày">
                     <option value="">Ngày</option>
                   </select>
-                  <select id="dobMonth" class="form-select" aria-label="Tháng">
+                  <select id="dobMonth" class="form-select track-u" aria-label="Tháng">
                     <option value="">Tháng</option>
                   </select>
-                  <select id="dobYear" class="form-select" aria-label="Năm">
+                  <select id="dobYear" class="form-select track-u" aria-label="Năm">
                     <option value="">Năm</option>
                   </select>
                 </div>
               </div>
 
               <!-- Gender -->
-              <div class="form-group">
-                <label class="form-label">Giới tính</label>
+              <div class="form-group track-u">
+                <label class="form-label track-u">Giới tính</label>
                 <div class="gender-row">
-                  <label class="gender-option" id="genderMaleLabel">
-                    <input type="radio" name="gender" id="genderMale" value="male" />
-                    <span class="gender-btn">
-                      <span class="gender-icon">👦</span>
-                      <span>Bé trai</span>
+                  <label class="gender-option track-u" id="genderMaleLabel">
+                    <input type="radio" name="gender" id="genderMale" class="track-u" value="male" />
+                    <span class="gender-btn track-u">
+                      <span class="gender-icon track-u">👦</span>
+                      <span class="track-u">Bé trai</span>
                     </span>
                   </label>
-                  <label class="gender-option" id="genderFemaleLabel">
-                    <input type="radio" name="gender" id="genderFemale" value="female" />
-                    <span class="gender-btn">
-                      <span class="gender-icon">👧</span>
-                      <span>Bé gái</span>
+                  <label class="gender-option track-u" id="genderFemaleLabel">
+                    <input type="radio" name="gender" id="genderFemale" class="track-u" value="female" />
+                    <span class="gender-btn track-u">
+                      <span class="gender-icon track-u">👧</span>
+                      <span class="track-u">Bé gái</span>
                     </span>
                   </label>
                 </div>
               </div>
 
               <!-- Height -->
-              <div class="form-group">
-                <label class="form-label" for="height">Chiều cao (cm)</label>
-                <div class="input-wrap">
-                  <input type="number" id="height" class="form-input" placeholder="VD: 89.4" min="30" max="200" step="0.1" />
-                  <span class="input-unit">cm</span>
+              <div class="form-group track-u">
+                <label class="form-label track-u" for="height">Chiều cao (cm)</label>
+                <div class="input-wrap track-u">
+                  <input type="number" id="height" class="form-input track-u" placeholder="VD: 89.4" min="30" max="200" step="0.1" />
+                  <span class="input-unit track-u">cm</span>
                 </div>
               </div>
 
               <!-- Weight -->
-              <div class="form-group">
-                <label class="form-label" for="weight">Cân nặng (kg)</label>
-                <div class="input-wrap">
-                  <input type="number" id="weight" class="form-input" placeholder="VD: 14.6" min="1" max="150" step="0.1" />
-                  <span class="input-unit">kg</span>
+              <div class="form-group track-u">
+                <label class="form-label track-u" for="weight">Cân nặng (kg)</label>
+                <div class="input-wrap track-u">
+                  <input type="number" id="weight" class="form-input track-u" placeholder="VD: 14.6" min="1" max="150" step="0.1" />
+                  <span class="input-unit track-u">kg</span>
                 </div>
               </div>
 
               <!-- Notes -->
-              <div class="form-note">
+              <div class="form-note track-u">
                 <p>💡 <strong>Lưu ý:</strong> Với trẻ dưới 2 tuổi, chiều cao tính bằng độ dài nằm. Nhập chính xác để có kết quả tốt nhất.</p>
               </div>
 
-              <div class="form-actions">
-                <button type="submit" id="btnCalculate" class="btn btn--primary">
-                  <span class="btn-icon">🔍</span> Kết quả
+              <div class="form-actions track-u">
+                <button type="submit" id="btnCalculate" class="btn btn--primary track-u">
+                  <span class="btn-icon track-u">🔍</span> Kết quả
                 </button>
-                <button type="button" id="btnReset" class="btn btn--outline">
-                  <span class="btn-icon">↺</span> Làm lại
+                <button type="button" id="btnReset" class="btn btn--outline track-u">
+                  <span class="btn-icon track-u">↺</span> Làm lại
                 </button>
               </div>
 
